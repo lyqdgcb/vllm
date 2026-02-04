@@ -1047,7 +1047,8 @@ class DeepseekV2Model(nn.Module):
                 topk_weights=topk_weights,
                 topk_ids=topk_ids,
                 router_logits=router_logits,
-                row_idx=row_idx
+                row_idx=row_idx,
+                dynamic_scales=None
             )
             
             if send_attn_handle is not None:
@@ -1061,7 +1062,6 @@ class DeepseekV2Model(nn.Module):
             metadata=afd_metadata
         )
         hidden_states = recv_hidden_states
-
         return hidden_states, residual
 
     def forward(
