@@ -334,6 +334,7 @@ class ForwardContext:
     num_ubatches: int = 1
     # TODO(yxj):to support different afdconnector
     cam_afdconnector_data: Optional[Any] = None
+    m2n_afdconnector_data: Optional[Any] = None
     afd_comm_event: Optional[Any] = None
     afd_comm_stream: Optional[Any] = None
 
